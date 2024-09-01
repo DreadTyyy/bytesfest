@@ -229,7 +229,7 @@ Body{
     gap: 10px; /* Jarak antara elemen */
   }
   
-  .grid-item {
+  .motif-batik {
     transition: all 0.3s ease; /* Efek transisi yang halus */
     width: 100%;
     height: 400px;
@@ -238,7 +238,7 @@ Body{
     border-radius: 10px;
   }
 
-  .grid-item:hover {
+  .collapse-active {
     grid-column: span 2; /* Membuat elemen meluas menjadi 2 kolom saat hover */
     transform: scale(1); /* Memperbesar gambar sedikit */
   }
