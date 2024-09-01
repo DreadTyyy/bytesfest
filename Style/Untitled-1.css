@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: 'Raleway';
+}
+
+Body{
+    background-color: #011f4b;
+    background-image: url('../Galery/Group\ 31.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    background-image: url('../Galery/Mask\ group\ \(4\).png');
+    background-size: cover;
+    background-position: center;
+    padding: 0 4%;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    height: 70px;
+    z-index: 999;
+}
+
+.navbar-menu ul {
+    display: flex;
+}
+
+.navbar-menu a{
+    display: inline-block;
+    margin: 0 0.3rem;
+}
+
+.navbar-logo img {
+    width: 2rem;
+}
+
+.header{
+    background-image: url('../Galery/Group\ 31.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 30px 20px;
+}
+
+.kanan{
+    width: 48%;
+}
+
+.kiri{
+    width: 52%;
+}
+
+.header .kanan b1{
+    color: aqua;
+}
+
+.header .hbg .flex, .flex3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kanan h1{
+    padding-bottom: 1.5rem;
+    font-weight: 900;
+}
+
+.ahmat a{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #ebff4c;
+    color: #000;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.B img{
+    width: 75px;
+    padding-top: 40px;
+}
+
+.kiri .lutfi .ahhh{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.kiri .lutfi .ahhh img{
+    width: 80%;
+    justify-content: center;
+}
+
+.wayang1{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 215px;
+    padding-left: 1.5rem;
+}
+
+.wayang .ar1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 25%;
+    overflow: hidden;
+}
+
+.wayang1 .ar1 img{
+    height: 175px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline;
+    border-color: #000;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.wayang1 .ar1 p{
+    display: inline-block;
+    padding: 0.5rem 25%;
+    background-color: #ebff4c;
+    color: #000;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    position: relative;
+    font-weight: 100;
+}
+
+.pembatas{
+    overflow-y: hidden;
+}
+
+.pembatas .pembatas1 {
+    position: absolute;
+    rotate: 5deg;
+    width: 99%;
+    height: 100px;
+    text-align: center;
+    padding-top: 40px;
+    padding-top: -5px;
+    padding-bottom: -5px;
+    background-color: #ebff4c;
+}
+.pembatas .pembatas2{
+    rotate: -5deg;
+    width: 99%;
+    height: 100px;
+    text-align: center;
+    padding-top: 40px;
+    padding-top: -5px;
+    padding-bottom: -5px;
+    background-color: #ebff4c;
+}
+
+.flex2{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.anomali2, .anomali3, .anomali4, .anomali1{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    display: inline;
+}
+
+.card1{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    display: inline;
+}
+
+.gambar1{
+    width: 40%;
+}
+.gambar2, .gambar3,{
+    width: 20%;
+}
+
+.gambar4,.gambar5{
+    width: 50%;
+    height: 50%;
+}
+
+.gambar7,.gambar8,.gambar6{
+    width: 20%;
+}
+
+.gambar7,.gambar6{
+    height: 25%;
+}
+.gambar8, .gambar1,.gambar3,.gambar2{
+    height: 50%;
+}
+
+.gambar9,.gambar10{
+    height: 50%;
+    width: 20%;
+}
+
+.gambar1,.gambar9,.gambar8,.gambar7,.gambar6,.gambar5,.gambar4,.gambar3,.gambar2{
+    overflow: hidden;
+}
+
+
+/*gambar batik sekat sekat*/
+.grid-container {
+    padding-left: 2%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Membuat 6 kolom dengan ukuran yang sama */
+    gap: 10px; /* Jarak antara elemen */
+  }
+  
+  .grid-item {
+    transition: all 0.3s ease; /* Efek transisi yang halus */
+    width: 100%;
+    height: 400px;
+    overflow: hidden; /* Menghilangkan bagian yang melampaui ukuran */
+    display: inline-block;
+    border-radius: 10px;
+  }
+
+  .grid-item:hover {
+    grid-column: span 2; /* Membuat elemen meluas menjadi 2 kolom saat hover */
+    transform: scale(1); /* Memperbesar gambar sedikit */
+  }
+
+  .bawah1{
+    display: flex;
+    padding: 10px 10px 10px 10px;
+  }
+  .bawah1 p{
+    width: 50%;
+    align-items: flex-start;
+  }
+
+  .bawah1 b{
+    content: "";
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    width: 90%;
+    display: block;
+    margin: 2px auto;
+  }
+
+  .bawah1 a{
+    width: 17%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+  }
+.storywayang{
+    display: flex;
+    padding: 10px 10px 10px 10px;
+}
+
+.flex3 p{
+    width: 50%;
+    padding-left: 20%;
+}
+
+@media(max-width: 768px){}
+@media(max-width: 450px){}
