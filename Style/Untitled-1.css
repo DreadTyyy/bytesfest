@@ -1,3 +1,15 @@
+:root {
+    --primary-color: #001F4B;
+    --secondary-color: #EBFF4C;
+    --dark-900: #000409;
+    --dark-700: #4D4F52;
+    --dark-500: #808183;
+    --dark-300: #B3B4B5;
+    --dark-100: #E6E6E6;
+    --dark-50: #F2F2F3;
+    --bg-dark: #000408;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,10 +23,7 @@
 }
 
 Body{
-    background-color: #011f4b;
-    background-image: url('../Galery/Group\ 31.png');
-    background-size: cover;
-    background-position: center;
+    background-color: var(--bg-dark);
 }
 
 .navbar {
@@ -24,9 +33,6 @@ Body{
     left: 0;
     display: flex;
     justify-content: space-between;
-    background-image: url('../Galery/Mask\ group\ \(4\).png');
-    background-size: cover;
-    background-position: center;
     padding: 0 4%;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
     height: 70px;
@@ -43,14 +49,16 @@ Body{
 }
 
 .navbar-logo img {
-    width: 2rem;
+    height: 1.2rem;
+    width: auto;
 }
 
 .header{
-    background-image: url('../Galery/Group\ 31.png');
-    background-size: cover;
-    background-position: center;
-    padding: 80px 30px 20px;
+    background-image: 
+        linear-gradient(rgb(0, 4, 8), rgba(0, 4, 8,0), rgb(0, 4, 8)),
+        url('../Galery/Group\ 31.png');
+    background-repeat: repeat;
+    padding: 100px 30px 20px;
 }
 
 .kanan{
@@ -59,10 +67,20 @@ Body{
 
 .kiri{
     width: 52%;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.header .kanan h1 {
+    font-size: 3rem;
+    color: var(--dark-50);
+    font-weight: 400;
 }
 
 .header .kanan b1{
-    color: aqua;
+    font-weight: 800;
+    color: var(--secondary-color);
 }
 
 .header .hbg .flex, .flex3 {
@@ -77,22 +95,22 @@ Body{
 
 .ahmat a{
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #ebff4c;
-    color: #000;
-    border-radius: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 9999px;
     text-decoration: none;
-    font-weight: 100;
+    font-weight: 500;
 }
 
 .B img{
-    width: 75px;
+    width: 108px;
     padding-top: 40px;
 }
 
 .kiri .lutfi .ahhh{
     display: flex;
-    justify-content:center;
+    justify-content: end;
     align-items: center;
 }
 
@@ -108,7 +126,7 @@ Body{
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    width: 150px;
+    width: 100%;
     height: 215px;
     padding-left: 1.5rem;
 }
@@ -191,7 +209,7 @@ Body{
 .gambar1{
     width: 40%;
 }
-.gambar2, .gambar3,{
+.gambar2, .gambar3{
     width: 20%;
 }
 
