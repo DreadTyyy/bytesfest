@@ -241,24 +241,54 @@ Body{
 /*gambar batik sekat sekat*/
 .grid-container {
     padding-left: 2%;
+    padding-right: 2%;
     display: grid;
     grid-template-columns: repeat(7, 1fr); /* Membuat 6 kolom dengan ukuran yang sama */
     gap: 10px; /* Jarak antara elemen */
   }
   
   .motif-batik {
-    transition: all 0.3s ease; /* Efek transisi yang halus */
+    transition: all 5s ease; /* Efek transisi yang halus */
     width: 100%;
     height: 400px;
     overflow: hidden; /* Menghilangkan bagian yang melampaui ukuran */
     display: inline-block;
     border-radius: 10px;
+    position: relative;
   }
 
   .collapse-active {
     grid-column: span 2; /* Membuat elemen meluas menjadi 2 kolom saat hover */
     transform: scale(1); /* Memperbesar gambar sedikit */
-  }
+}
+
+.overlay{
+    position: absolute;
+    background-image: linear-gradient(rgba(0, 4, 8,0), rgb(0, 4, 8));
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0%;
+}
+
+.motif-batik.collapse-active .overlay{
+    opacity: 100%;
+}
+
+.motif-batik p{
+    position: absolute;
+    color: var(--dark-50);
+    bottom: 10px;
+    left: 10px;
+    opacity: 0%;
+    z-index: 101;
+}
+
+.motif-batik.collapse-active p{
+    opacity: 100%;
+}
 
   .bawah1{
     display: flex;
@@ -269,7 +299,7 @@ Body{
     align-items: flex-start;
   }
 
-  .bawah1 b{
+  .bawah1 b, .image-card .overlay b{
     content: "";
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
     width: 90%;
@@ -284,14 +314,82 @@ Body{
     flex-direction: column-reverse;
     align-items: end;
   }
-.storywayang{
-    display: flex;
-    padding: 10px 10px 10px 10px;
-}
-
+  
 .flex3 p{
     width: 50%;
     padding-left: 20%;
+}
+
+  .container {
+    display: flex;
+    gap: 2rem;
+}
+
+.image-card {
+    position: relative;
+    width: 400px; /* Ukuran gambar, dapat diubah sesuai kebutuhan */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.1); /* Zoom-in efek saat di hover */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-card:hover .overlay {
+    opacity: 1; /* Tampilkan overlay saat di hover */
+}
+
+.overlay h2 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 30px;
+    color: #fff;
+}
+
+.karakter{
+    display: flex;
+    padding: 20px 20px 10px 20px;
+    gap: 1rem;
+}
+
+.batas-foto{
+    width: 200px;
+    height: 400px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.batas-foto img{
+    max-height: 400px;
+    max-width: 200px;
+    border-radius: 10px;
 }
 
 @media(max-width: 768px){}
