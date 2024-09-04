@@ -35,7 +35,7 @@ Body{
     justify-content: space-between;
     padding: 0 4%;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
-    height: 70px;
+    height: 60px;
     z-index: 999;
     background: rgba(0, 4, 8, 0.8);
     backdrop-filter: blur(10px);
@@ -97,7 +97,7 @@ Body{
     font-weight: 900;
 }
 
-.ahmat a{
+.ahmat a, .bawah1 a{
     display: inline-block;
     padding: 0.8rem 1.5rem;
     background-color: var(--secondary-color);
@@ -161,6 +161,7 @@ Body{
 
 .pembatas{
     overflow-y: hidden;
+    background-color: var(--dark-700);
 }
 
 .pembatas .pembatas1 {
@@ -172,7 +173,6 @@ Body{
     padding-top: 40px;
     padding-top: -5px;
     padding-bottom: -5px;
-    background-color: #ebff4c;
 }
 .pembatas .pembatas2{
     rotate: -5deg;
@@ -182,14 +182,16 @@ Body{
     padding-top: 40px;
     padding-top: -5px;
     padding-bottom: -5px;
-    background-color: #ebff4c;
 }
 
 .flex2{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2px;
+    padding: 1rem 2% 1rem 2%;
     overflow: hidden;
+    width: 100vw;
+    height: 90vh;
 }
 
 .anomali2, .anomali3, .anomali4, .anomali1{
@@ -198,20 +200,36 @@ Body{
     overflow : hidden;
     display: inline;
     gap: 2px;
+    height: 90vh;
 }
 
 .card1{
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     overflow: hidden;
-    display: inline;
+    height: 45vh;
 }
 
 .card2{
     display: grid;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     overflow: hidden;
     display: inline;
+    height: 45vh;
+}
+
+.gambar1{
+ height: 50%;
+}
+
+.gambar2 img, .gambar3 img, .gambar4, .gambar5, .gambar8, .gambar9, .gambar10{
+    width: 100%;
+    height: 50%;
+}
+
+.gambar6, .gambar7{
+    width: 100%;
+    height: 25%;
 }
 
 /*gambar batik sekat sekat*/
@@ -278,7 +296,8 @@ Body{
   .bawah1 b, .image-card .overlay2 b{
     content: "";
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-    width: 90%;
+    width: 80%;
+    padding-right: 10px;
     display: block;
     margin: 2px auto;
   }
@@ -286,9 +305,8 @@ Body{
   .bawah1 a{
     width: 17%;
     padding-right: 20px;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: end;
+    text-align: center;
+    border: 2px solid var(--dark-100);
   }
   
 .flex3 p{
@@ -350,22 +368,43 @@ Body{
 }
 
 .karakter{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding: 20px 20px 10px 20px;
     gap: 1rem;
 }
 
-.batas-foto{
-    width: 200px;
-    height: 400px;
+.kar1{
+    border-radius: 10px;
     overflow: hidden;
-    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.batas-foto{
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+}
+
+.spas{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .batas-foto img{
-    max-height: 400px;
-    max-width: 200px;
-    border-radius: 10px;
+    height: 100%;
+    width: auto;
+}
+
+.karakter .kar1 a{
+    background-color: var(--primary-color);
+    padding: 7px;
+    border: 2px solid var(--dark-300);
+    border-radius: 1rem;
+    bottom: 10px;
 }
 
 .fungsi-batik{
@@ -390,7 +429,7 @@ Body{
 
 .card-fungsibatik a{
     text-align: center;
-    top: 48%;
+    top: 43%;
     display: inline-block;
     padding: 10px;
     background-color: var(--primary-color);
@@ -400,7 +439,7 @@ Body{
 
 .card-fungsibatik:hover a{
     text-align: center;
-    top: 48%;
+    top: 43%;
     display: inline-block;
     padding: 10px;
     background-color: var(--primary-color);
@@ -440,9 +479,43 @@ Body{
 
 .flex-categoribatik .categori-card img{
     height: 400px;
-    width: 290px;
+    width: 100%;
     border-radius: 1rem;
 }
 
-@media(max-width: 768px){}
+@media(max-width: 768px){
+body{
+    padding-right: 2%;
+    padding-left: 2%;
+}
+.B img{
+    width: 70px;
+    padding-top: 20px;
+}
+a{
+    font-size: 13px;
+}
+.batas-foto{
+    height: 0;
+}
+.batas-foto img{
+    width: 100%;
+    height: auto;
+}
+.card-fungsibatik .card2-fungsibatik img {
+    width: 150px;
+    height: 200px;
+}
+.card-fungsibatik {
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.flex-categoribatik .categori-card img {
+    height: 200px;
+}
+}
 @media(max-width: 450px){}
