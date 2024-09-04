@@ -343,7 +343,7 @@ Body{
     transform: scale(1.1); /* Zoom-in efek saat di hover */
 }
 
-.overlay {
+.overlay2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -358,19 +358,19 @@ Body{
     transition: opacity 0.3s ease;
 }
 
-.image-card:hover .overlay {
+.image-card:hover .overlay2 {
     opacity: 1; /* Tampilkan overlay saat di hover */
 }
 
-.overlay h2 {
-    color: #fff;
+.overlay2 h2 {
+    color: var(--dark-50);
     font-size: 20px;
     margin-bottom: 20px;
 }
 
 .icon {
     font-size: 30px;
-    color: #fff;
+    color: var(--dark-50);
 }
 
 .karakter{
@@ -390,6 +390,81 @@ Body{
     max-height: 400px;
     max-width: 200px;
     border-radius: 10px;
+}
+
+.fungsi-batik{
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    gap: 16px; /* Jarak antara elemen */
+}
+
+.card-fungsibatik{
+    width: 300px;
+    height: 440px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card2-fungsibatik{
+    position: absolute;
+}
+
+.card-fungsibatik a{
+    text-align: center;
+    top: 48%;
+    display: inline-block;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--dark-300);
+    border-radius: 5rem;
+}
+
+.card-fungsibatik:hover a{
+    text-align: center;
+    top: 48%;
+    display: inline-block;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5rem;
+}
+
+.card-fungsibatik .card2-fungsibatik img{
+    height: 400px;
+    width: 290px;
+    border-radius: 1rem;
+}
+
+.flex-categoribatik{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    gap: 1rem
+}
+
+.categori-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.categori-card .kata {
+    width: 100%;
+    padding: 7px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    border: 1px solid var(--dark-100);
+}
+
+.flex-categoribatik .categori-card img{
+    height: 400px;
+    width: 290px;
+    border-radius: 1rem;
 }
 
 @media(max-width: 768px){}
