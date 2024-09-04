@@ -186,57 +186,33 @@ Body{
 }
 
 .flex2{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
     overflow: hidden;
 }
 
 .anomali2, .anomali3, .anomali4, .anomali1{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    overflow : hidden;
     display: inline;
+    gap: 2px;
 }
 
 .card1{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     overflow: hidden;
     display: inline;
 }
 
-.gambar1{
-    width: 40%;
-}
-.gambar2, .gambar3{
-    width: 20%;
-}
-
-.gambar4,.gambar5{
-    width: 50%;
-    height: 50%;
-}
-
-.gambar7,.gambar8,.gambar6{
-    width: 20%;
-}
-
-.gambar7,.gambar6{
-    height: 25%;
-}
-.gambar8, .gambar1,.gambar3,.gambar2{
-    height: 50%;
-}
-
-.gambar9,.gambar10{
-    height: 50%;
-    width: 20%;
-}
-
-.gambar1,.gambar9,.gambar8,.gambar7,.gambar6,.gambar5,.gambar4,.gambar3,.gambar2{
+.card2{
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
     overflow: hidden;
+    display: inline;
 }
-
 
 /*gambar batik sekat sekat*/
 .grid-container {
@@ -299,7 +275,7 @@ Body{
     align-items: flex-start;
   }
 
-  .bawah1 b, .image-card .overlay b{
+  .bawah1 b, .image-card .overlay2 b{
     content: "";
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
     width: 90%;
@@ -430,6 +406,7 @@ Body{
     background-color: var(--primary-color);
     border: 1px solid var(--secondary-color);
     border-radius: 5rem;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .card-fungsibatik .card2-fungsibatik img{
