@@ -186,35 +186,57 @@ Body{
 
 .flex2{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
+    grid-template-columns: 3fr 2fr 1fr 2fr;
+    gap: 3px;
     padding: 1rem 2% 1rem 2%;
     overflow: hidden;
     width: 100vw;
-    height: 90vh;
+    height: 754px;
 }
 
 .anomali2, .anomali3, .anomali4, .anomali1{
+    gap: 10px;
+    height: 90vh;
+}
+
+.anomlai1{
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr 2fr;
     overflow : hidden;
     display: inline;
-    gap: 2px;
-    height: 90vh;
+}
+
+.anomali2{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    overflow : hidden;
+    display: inline;
+}
+
+.anomali4{
+    display: grid;
+    overflow : hidden;
+    display: inline;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.anomali3{
+    display: grid;
+    overflow : hidden;
+    display: inline;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.grid3{
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .card1{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
     overflow: hidden;
-    height: 45vh;
-}
-
-.card2{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    overflow: hidden;
-    display: inline;
     height: 45vh;
 }
 
@@ -222,15 +244,75 @@ Body{
  height: 50%;
 }
 
-.gambar2 img, .gambar3 img, .gambar4, .gambar5, .gambar8, .gambar9, .gambar10{
+.gambar1, .gambar2, .gambar3, .gambar4, .gambar5, .gambar6, .gambar7, .gambar8, .gambar9, .gambar10{
     width: 100%;
+    gap: 2px;
+    overflow: hidden;
+    border: 1px solid var(--bg-dark);
+}
+.gambar5 img{
+    height: 216px;
+}
+.gambar4 img{
+    height: 432px;
+}
+.gambar4{
+    height: 432px;
+}
+.gambar9, .gambar10{
+    height: 324px;
+}
+.gambar9 img, .gambar10 img{
+    height: 324px;
+}
+.gambar6, .gambar7{
+    height: 163px;
+}
+.gambar6 img, .gambar7 img{
+    height: 161px;
+}
+.gambar8{
+    height: 344px;
+}
+.gambar8 img{
+    height: 344px;
+    width: auto;
+}
+.gambar2 img, .gambar3 img{
+    width: 100%;
+}
+/*.gambar4 img, .gambar5 img{
     height: 50%;
 }
 
-.gambar6, .gambar7{
-    width: 100%;
-    height: 25%;
+.gambar8 img, .gambar10 img{
+    height: 394px;
 }
+
+.gambar9 img{
+    height: 378px;
+}
+
+.gambar2 img, .gambar3 img, .gambar4 img, .gambar5 img, .gambar8 img{
+    width: 100%;
+}
+
+.gambar6 img, .gambar7 img{
+    height: 187px;
+}
+
+.gambar4 img{
+    height:500px ;
+}
+
+.gambar4{
+    height: 500px;
+    overflow: hidden;
+}
+
+.gambar5 img{
+    height: 251px;
+}*/
 
 /*gambar batik sekat sekat*/
 .grid-container {
@@ -483,6 +565,72 @@ Body{
     border-radius: 1rem;
 }
 
+@media(min-width: 1440px){
+.gambar4 img, .gambar5 img{
+    height: 50%;
+}
+
+.gambar8 img, .gambar10 img{
+    height: 394px;
+}
+
+.gambar9 img{
+    height: 378px;
+}
+
+.gambar2 img, .gambar3 img, .gambar4 img, .gambar5 img, .gambar8 img{
+    width: 100%;
+}
+
+.gambar6 img, .gambar7 img{
+    height: 187px;
+}
+
+.gambar4 img{
+    height:500px ;
+}
+
+.gambar4{
+    height: 500px;
+    overflow: hidden;
+}
+
+.gambar5 img{
+    height: 251px;
+}
+@media(max-width: 1024px){
+    .flex2{
+        height: 648px;
+    }
+    .gambar5 img{
+        height: 216px;
+    }
+    .gambar4 img{
+        height: 432px;
+    }
+    .gambar4{
+        height: 432px;
+    }
+    .gambar9, .gambar10{
+        height: 324px;
+    }
+    .gambar9 img, .gambar10 img{
+        height: 324px;
+    }
+    .gambar6, .gambar7{
+        height: 163px;
+    }
+    .gambar6 img, .gambar7 img{
+        height: 161px;
+    }
+    .gambar8{
+        height: 344px;
+    }
+    .gambar8 img{
+        height: 344px;
+        width: auto;
+    }
+}
 @media(max-width: 768px){
 body{
     padding-right: 2%;
@@ -495,6 +643,37 @@ body{
 a{
     font-size: 13px;
 }
+.flex2{
+        height: 490px;
+    }
+    .gambar5 img{
+        height: 163px;
+    }
+    .gambar4 img{
+        height: 324px;
+    }
+    .gambar4{
+        height: 326px;
+    }
+    .gambar9, .gambar10{
+        height: 245px;
+    }
+    .gambar9 img, .gambar10 img{
+        height: 245px;
+    }
+    .gambar6, .gambar7{
+        height: 122px;
+    }
+    .gambar6 img, .gambar7 img{
+        height: 122px;
+    }
+    .gambar8{
+        height: 244px;
+    }
+    .gambar8 img{
+        height: 244px;
+        width: auto;
+    }
 .batas-foto{
     height: 0;
 }

@@ -7,3 +7,9 @@ motifBatiks.forEach(el => {
         el.classList.add('collapse-active');
     });
 });
+
+//const menu = document.querySelector('#menu')
+
+//menu.addEventListener(
+//    'click', 
+//)
