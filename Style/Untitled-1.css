@@ -183,137 +183,85 @@ Body{
     padding-top: -5px;
     padding-bottom: -5px;
 }
-
-.flex2{
+.grid-container-1 {
     display: grid;
-    grid-template-columns: 3fr 2fr 1fr 2fr;
-    gap: 3px;
-    padding: 1rem 2% 1rem 2%;
-    overflow: hidden;
-    width: 100vw;
-    height: 90vh;
-}
+    grid-template-columns: repeat(8, 1fr); /* 6 kolom dengan ukuran yang berbeda */
+    grid-template-rows: repeat(4, 0.25fr); /* 4 baris dengan ukuran fraksi yang sama */
+    gap: 10px; /* Jarak antar elemen */
+    padding: 20px;
+    max-width: 100vw; /* Maksimal lebar grid sesuai dengan lebar viewport */
+    overflow: hidden; /* Mencegah overflow konten di luar grid */
+  }
+  
+  .item {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    overflow: hidden; /* Mencegah overflow konten di dalam item */
+  }
+  
+  .item img {
+    max-width: 100%; /* Maksimal lebar gambar sesuai dengan kontainer */
+    height: auto; /* Menjaga rasio aspek gambar */
+    display: block;
+  }
+  
+  .search-bar {
+    grid-column: 1 / span 3; 
+    grid-row: 1 / span 2;
+  }
+  
+  .wayang-1 {
+    grid-column: 1 / span 2; 
+    grid-row: 3 / span 2; 
+  }
+  
+  .wayang-2 {
+    grid-column: 3 / span 1; 
+    grid-row: 3 / span 2; 
+  }
+  
+  .wayang-3 {
+    grid-column: 4 / span 2; 
+    grid-row: 1 / span 3; 
+  }
+  
+  .wayang-4 {
+    grid-column: 4 / span 2; 
+    grid-row: 4 / span 1; 
+  }
+  
+  .wayang-5 {
+    grid-column: 6 / span 1; 
+    grid-row: 1 / span 1; 
+  }
+  
+  .wayang-6 {
+    grid-column: 6 / span 1; 
+    grid-row: 2 / span 1; 
+  }
+  
+  .wayang-7 {
+    grid-column: 6 / span 1; 
+    grid-row: 3 / span 2; 
+  }
+  
+  .wayang-8 {
+    grid-column: 7 / span 2; 
+    grid-row: 1 / span 2; 
+  }
+  
+  .wayang-9 {
+    grid-column: 7 / span 2; 
+    grid-row: 3 / span 2; 
+  }  
 
-.anomali2, .anomali3, .anomali4, .anomali1{
-    gap: 10px;
-    height: 90vh;
-}
-
-.anomlai1{
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    overflow : hidden;
-    display: inline;
-}
-
-.anomali2{
-    display: grid;
-    grid-template-rows: 2fr 1fr;
-    overflow : hidden;
-    display: inline;
-}
-
-.anomali4{
-    display: grid;
-    overflow : hidden;
-    display: inline;
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.anomali3{
-    display: grid;
-    overflow : hidden;
-    display: inline;
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.grid3{
-    display: grid;
-    overflow: hidden;
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.card1{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    overflow: hidden;
-    height: 45vh;
-}
-
-.gambar1{
- height: 50%;
-}
-
-.gambar1, .gambar2, .gambar3, .gambar4, .gambar5, .gambar6, .gambar7, .gambar8, .gambar9, .gambar10{
+  .wayang-1 img, .search-bar,.wayang-2 img, .wayang-3 img,.wayang-4 img,.wayang-5 img,.wayang-6 img,.wayang-7 img,.wayang-8 img,.wayang-9 img{
     width: 100%;
-    gap: 2px;
-    overflow: hidden;
-    border: 1px solid var(--bg-dark);
-}
-.gambar5 img{
-    height: 216px;
-}
-.gambar4 img{
-    height: 432px;
-}
-.gambar4{
-    height: 432px;
-}
-.gambar9, .gambar10{
-    height: 324px;
-}
-.gambar9 img, .gambar10 img{
-    height: 324px;
-}
-.gambar6, .gambar7{
-    height: 163px;
-}
-.gambar6 img, .gambar7 img{
-    height: 161px;
-}
-.gambar8{
-    height: 344px;
-}
-.gambar8 img{
-    height: 344px;
-    width: auto;
-}
-.gambar2 img, .gambar3 img{
-    width: 100%;
-}
-/*.gambar4 img, .gambar5 img{
-    height: 50%;
-}
-
-.gambar8 img, .gambar10 img{
-    height: 394px;
-}
-
-.gambar9 img{
-    height: 378px;
-}
-
-.gambar2 img, .gambar3 img, .gambar4 img, .gambar5 img, .gambar8 img{
-    width: 100%;
-}
-
-.gambar6 img, .gambar7 img{
-    height: 187px;
-}
-
-.gambar4 img{
-    height:500px ;
-}
-
-.gambar4{
-    height: 500px;
-    overflow: hidden;
-}
-
-.gambar5 img{
-    height: 251px;
-}*/
-
+  }
 /*gambar batik sekat sekat*/
 .grid-container {
     padding-left: 2%;
@@ -565,71 +513,8 @@ Body{
     border-radius: 1rem;
 }
 
-@media(min-width: 1440px){
-.gambar4 img, .gambar5 img{
-    height: 50%;
-}
-
-.gambar8 img, .gambar10 img{
-    height: 394px;
-}
-
-.gambar9 img{
-    height: 378px;
-}
-
-.gambar2 img, .gambar3 img, .gambar4 img, .gambar5 img, .gambar8 img{
-    width: 100%;
-}
-
-.gambar6 img, .gambar7 img{
-    height: 187px;
-}
-
-.gambar4 img{
-    height:500px ;
-}
-
-.gambar4{
-    height: 500px;
-    overflow: hidden;
-}
-
-.gambar5 img{
-    height: 251px;
-}
+@media(min-width: 1440px){}
 @media(max-width: 1024px){
-    .flex2{
-        height: 648px;
-    }
-    .gambar5 img{
-        height: 216px;
-    }
-    .gambar4 img{
-        height: 432px;
-    }
-    .gambar4{
-        height: 432px;
-    }
-    .gambar9, .gambar10{
-        height: 324px;
-    }
-    .gambar9 img, .gambar10 img{
-        height: 324px;
-    }
-    .gambar6, .gambar7{
-        height: 163px;
-    }
-    .gambar6 img, .gambar7 img{
-        height: 161px;
-    }
-    .gambar8{
-        height: 344px;
-    }
-    .gambar8 img{
-        height: 344px;
-        width: auto;
-    }
 }
 @media(max-width: 768px){
 body{
@@ -643,37 +528,6 @@ body{
 a{
     font-size: 13px;
 }
-.flex2{
-        height: 490px;
-    }
-    .gambar5 img{
-        height: 163px;
-    }
-    .gambar4 img{
-        height: 324px;
-    }
-    .gambar4{
-        height: 326px;
-    }
-    .gambar9, .gambar10{
-        height: 245px;
-    }
-    .gambar9 img, .gambar10 img{
-        height: 245px;
-    }
-    .gambar6, .gambar7{
-        height: 122px;
-    }
-    .gambar6 img, .gambar7 img{
-        height: 122px;
-    }
-    .gambar8{
-        height: 244px;
-    }
-    .gambar8 img{
-        height: 244px;
-        width: auto;
-    }
 .batas-foto{
     height: 0;
 }
