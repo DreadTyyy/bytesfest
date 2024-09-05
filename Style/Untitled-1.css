@@ -14,7 +14,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: aliceblue;
     text-decoration: none;
     justify-content: center;
     align-items: center;
@@ -48,11 +47,56 @@ Body{
 .navbar-menu a{
     display: inline-block;
     margin: 0 0.3rem;
+    color: var(--dark-50);
 }
 
 .navbar-logo img {
     height: 1.2rem;
     width: auto;
+}
+
+.navbar-icon {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hamburger-line {
+    height: 2px;
+    background: var(--dark-50);
+    transition: all 0.2s ease-in-out;
+    border-radius: 9999px;
+}
+
+.hamburger-line:nth-child(1) {
+    width: 16px;
+    align-self: start;
+    transform-origin: bottom;
+}
+
+.hamburger-line:nth-child(2) {
+    width: 32px;
+    transition: all 0.4s ease-in-out;
+}
+
+.hamburger-line:nth-child(3) {
+    width: 16px;
+    transform-origin: bottom;
+    align-self: end;
+}
+
+.navbar-icon.active-nav {
+    .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 2px);
+    }
+    
+    .hamburger-line:nth-child(2) {
+        transform: rotate(315deg);
+    }
+    
+    .hamburger-line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -1px);
+    }
 }
 
 .header{
@@ -159,57 +203,91 @@ Body{
     font-weight: 500;
 }
 
-.pembatas{
-    overflow-y: hidden;
-    background-color: var(--dark-700);
+.container-konten-dua {
+    position: relative;
+    margin: 4rem 0;
+    width: 100%;
+    min-height: 240px;
+    overflow: hidden;
 }
 
-.pembatas .pembatas1 {
+.konten-batik,
+.konten-wayang {
+    /* padding: 1rem; */
     position: absolute;
-    rotate: 5deg;
-    width: 99%;
-    height: 100px;
-    text-align: center;
-    padding-top: 40px;
-    padding-top: -5px;
-    padding-bottom: -5px;
+    top: 50%;
+    left: 50%;
+    
+    display: flex;
+    align-items: center;
+    background-color: #E6E6E6;
+    height: 60px;
+    width: 110%;
+    border: 1px solid #001F48;
+    box-shadow: 0 4px 8px 0 rgba(0, 31, 72, 0.6);
 }
-.pembatas .pembatas2{
-    rotate: -5deg;
-    width: 99%;
-    height: 100px;
-    text-align: center;
-    padding-top: 40px;
-    padding-top: -5px;
-    padding-bottom: -5px;
+
+.text-batik, 
+.text-wayang {
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--primary-color) !important;
+    font-weight: 500;
+    white-space: nowrap;
+
+    /* animation: movingtext 10s linear infinite; */
 }
+.konten-batik {
+    transform: translate(-50%, -50%) rotate(6deg);
+}
+
+.konten-wayang {
+    transform: translate(-50%, -50%) rotate(-6deg);
+}
+
+.text-batik img, 
+.text-wayang img {
+    width: 42px;
+    height: 42px;
+}
+
 .grid-container-1 {
     display: grid;
     grid-template-columns: repeat(8, 1fr); /* 6 kolom dengan ukuran yang berbeda */
     grid-template-rows: repeat(4, 0.25fr); /* 4 baris dengan ukuran fraksi yang sama */
-    gap: 10px; /* Jarak antar elemen */
+    gap: 8px; /* Jarak antar elemen */
     padding: 20px;
     max-width: 100vw; /* Maksimal lebar grid sesuai dengan lebar viewport */
     overflow: hidden; /* Mencegah overflow konten di luar grid */
   }
   
   .item {
-    background-color: #f1f1f1;
-    border: 1px solid #ddd;
+    background-color: var(--dark-50);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 14px;
     overflow: hidden; /* Mencegah overflow konten di dalam item */
+    width: 100%;
+    height: 100%;
   }
   
   .item img {
     max-width: 100%; /* Maksimal lebar gambar sesuai dengan kontainer */
-    height: auto; /* Menjaga rasio aspek gambar */
+    height: 100%; /* Menjaga rasio aspek gambar */
     display: block;
+    object-fit: cover;
   }
   
   .search-bar {
+    font-size: 1.5rem;
+    align-items: start;
+    padding: 1.2rem 1rem;
     grid-column: 1 / span 3; 
     grid-row: 1 / span 2;
   }
@@ -272,6 +350,7 @@ Body{
   }
   
   .motif-batik {
+    cursor: pointer;
     transition: all 5s ease; /* Efek transisi yang halus */
     width: 100%;
     height: 400px;
@@ -517,38 +596,74 @@ Body{
 @media(max-width: 1024px){
 }
 @media(max-width: 768px){
-body{
-    padding-right: 2%;
-    padding-left: 2%;
+    body{
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+    .navbar-icon {
+        display: flex;
+    }
+    .navbar-menu {
+        display: none;
+    }
+    .B img{
+        width: 70px;
+        padding-top: 20px;
+    }
+    a{
+        font-size: 13px;
+    }
+    .batas-foto{
+        height: 0;
+    }
+    .batas-foto img{
+        width: 100%;
+        height: auto;
+    }
+    .card-fungsibatik .card2-fungsibatik img {
+        width: 150px;
+        height: 200px;
+    }
+    .card-fungsibatik {
+        width: 150px;
+        height: 200px;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .flex-categoribatik .categori-card img {
+        height: 200px;
+    }
 }
-.B img{
-    width: 70px;
-    padding-top: 20px;
+@media(max-width: 450px){
+    .container-konten-dua {
+        min-height: fit-content;
+    }
+
+    .konten-batik {
+        margin-top: 0.5rem;
+        position: static;
+        width: 100%;
+        transform: rotate(0deg);
+    }
+
+    .konten-wayang {
+        position: static;
+        width: 100%;
+        transform: rotate(0deg);
+    }
+
+    .text-batik, 
+    .text-wayang {
+        height: 50px;
+        font-size: 1.2rem;
+        gap: 0.8rem;
+    }
+
+    .text-batik img, 
+    .text-wayang img {
+        width: 24px;
+        height: 24px;
 }
-a{
-    font-size: 13px;
 }
-.batas-foto{
-    height: 0;
-}
-.batas-foto img{
-    width: 100%;
-    height: auto;
-}
-.card-fungsibatik .card2-fungsibatik img {
-    width: 150px;
-    height: 200px;
-}
-.card-fungsibatik {
-    width: 150px;
-    height: 200px;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.flex-categoribatik .categori-card img {
-    height: 200px;
-}
-}
-@media(max-width: 450px){}
