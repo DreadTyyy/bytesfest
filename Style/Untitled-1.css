@@ -25,6 +25,19 @@ Body{
     background-color: var(--bg-dark);
 }
 
+.circle-blur {
+    background: rgba(0, 31, 75, 0.3);
+    width: 100%;
+    height: 600px;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 9999px;
+    /* mix-blend-mode: multiply; */
+    filter: blur(60px);
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -144,11 +157,13 @@ Body{
 .ahmat a, .bawah1 a{
     display: inline-block;
     padding: 0.8rem 1.5rem;
+    width: fit-content;
+    white-space: nowrap;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     border-radius: 9999px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .B img{
@@ -203,6 +218,8 @@ Body{
     font-weight: 500;
 }
 
+/* konten dua */
+
 .container-konten-dua {
     position: relative;
     margin: 4rem 0;
@@ -243,11 +260,21 @@ Body{
     /* animation: movingtext 10s linear infinite; */
 }
 .konten-batik {
-    transform: translate(-50%, -50%) rotate(6deg);
+    transform: translate(-50%, -50%);
 }
 
 .konten-wayang {
+    transform: translate(-50%, -50%);
+}
+
+.konten-wayang.show {
     transform: translate(-50%, -50%) rotate(-6deg);
+    animation: batikTextComing 1s ease-in-out;
+}
+
+.konten-batik.show {
+    transform: translate(-50%, -50%) rotate(6deg);
+    animation: wayangTextComing 1s ease-in-out;
 }
 
 .text-batik img, 
@@ -257,17 +284,36 @@ Body{
     object-fit: contain;
 }
 
+@keyframes wayangTextComing {
+    0% {
+        transform: translate(-50%, 50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(6deg);
+    }
+}
+
+@keyframes batikTextComing {
+    0% {
+        transform: translate(-50%, 50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-6deg);
+    }
+}
+
 .grid-container-1 {
+    margin: 3rem 2rem;
     display: grid;
     grid-template-columns: repeat(8, 1fr); /* 6 kolom dengan ukuran yang berbeda */
     grid-template-rows: repeat(4, 0.25fr); /* 4 baris dengan ukuran fraksi yang sama */
     gap: 8px; /* Jarak antar elemen */
-    padding: 20px;
     max-width: 100vw; /* Maksimal lebar grid sesuai dengan lebar viewport */
     overflow: hidden; /* Mencegah overflow konten di luar grid */
   }
   
   .item {
+    position: relative;
     background-color: var(--dark-50);
     display: flex;
     align-items: center;
@@ -286,11 +332,47 @@ Body{
   }
   
   .search-bar {
-    font-size: 1.5rem;
-    align-items: start;
+    display: flex;
+    font-size: 1.2rem;
+    gap: 2rem;
+    align-items: flex-start;
     padding: 1.2rem 1rem;
     grid-column: 1 / span 3; 
     grid-row: 1 / span 2;
+    font-weight: 600;
+  }
+
+  .item i{
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 999px;
+  }
+
+  .explore-photo img {
+    cursor: pointer;
+    transition: all 0.105s ease-in;
+  }
+
+  .explore-photo i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    border-color: var(--dark-50);
+    opacity: 0%;
+    transition: all 0.105s ease-in;
+    cursor: pointer;
+    color: var(--dark-50);
+ }
+
+  .explore-photo:hover img{
+    filter: brightness(0.3);
+  }
+
+  .explore-photo:hover i {
+    opacity: 100%;
   }
   
   .wayang-1 {
@@ -341,9 +423,10 @@ Body{
   .wayang-1 img, .search-bar,.wayang-2 img, .wayang-3 img,.wayang-4 img,.wayang-5 img,.wayang-6 img,.wayang-7 img,.wayang-8 img,.wayang-9 img{
     width: 100%;
   }
+
 /*gambar batik sekat sekat*/
 .secmotifbatik{
-    padding: 0 2rem 0 2rem;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -398,16 +481,24 @@ Body{
     opacity: 100%;
 }
 
-.motif-batik p{
+.motif-batik .descriptionmotif {
     position: absolute;
     color: var(--dark-50);
-    bottom: 10px;
-    left: 10px;
+    bottom: 1.5rem;
+    left: 1rem;
     opacity: 0%;
+    font-weight: 600;
+    font-size: 1.2rem;
     z-index: 101;
 }
 
-.motif-batik.collapse-active p{
+.motif-batik .descriptionmotif p:nth-child(2){
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding-top: 0.4rem;
+}
+
+.motif-batik.collapse-active .descriptionmotif{
     opacity: 100%;
 }
 
@@ -425,18 +516,11 @@ Body{
 
   .bawah1 b, .image-card .overlay2 b{
     content: "";
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 2px solid var(--dark-100);
     width: 80%;
     padding-right: 10px;
     display: block;
     margin: 2px auto;
-  }
-
-  .bawah1 a{
-    width: 17%;
-    padding-right: 20px;
-    text-align: center;
-    border: 2px solid var(--dark-100);
   }
 
 .secfungyang{
@@ -693,6 +777,16 @@ Body{
         position: static;
         width: 100%;
         transform: rotate(0deg);
+    }
+
+    .konten-wayang.show {
+        transform: rotate(0deg);
+        animation: none;
+    }
+
+    .konten-batik.show {
+        transform: rotate(0deg);
+        animation: none;
     }
 
     .text-batik, 
