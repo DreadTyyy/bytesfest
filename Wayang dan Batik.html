@@ -13,6 +13,9 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
     <!-- Font Awesome Icon -->
     <link
       rel="stylesheet"
@@ -25,22 +28,22 @@
   <body>
     <!-- Navigasi Bar Start -->
     <nav class="navbar">
-      <div class="navbar-logo">
+      <div class="navbar-logo ease-top">
         <a href="Wayang dan Batik.html">
           <img src="Galery/Logo.png" class="logo-nav" alt="logo-nav" />
         </a>
       </div>
       <div class="navbar-menu">
         <ul>
-          <li>
+          <li class="ease-top">
             <a href="#">Home</a>
             <i class="fa-solid fa-caret-down"></i>
           </li>
-          <li>
+          <li class="ease-top" data-delay="0.15">
             <a href="/">Wayang</a>
             <i class="fa-solid fa-caret-down"></i>
           </li>
-          <li>
+          <li class="ease-top" data-delay="0.3">
             <a href="/">Batik</a>
             <i class="fa-solid fa-caret-down"></i>
           </li>
@@ -61,10 +64,17 @@
       <div class="hbg">
         <div class="flex">
           <div class="kanan">
-            <h1>
-              Discover the timeless <b1>Beauty</b1> of <b1>Batik and Wayang</b1>
-            </h1>
-            <div class="ahmat">
+            <div class="open-bottom">
+              <div>
+                <h1>
+                  Discover the timeless
+                  <b1>Beauty</b1>
+                  of
+                  <b1>Batik and Wayang</b1>
+                </h1>
+              </div>
+            </div>
+            <div class="ahmat ease-bottom">
               <a href="">
                 Get Started
                 <span
@@ -74,32 +84,42 @@
                 ></span>
               </a>
             </div>
-            <div class="B">
+            <div class="B ease-top" data-delay="0.2">
               <img src="Galery/Circle Group.png" alt="" />
             </div>
           </div>
           <div class="kiri">
+            <!-- <div class="open-right" data-delay="0.2"> -->
             <div class="lutfi">
               <div class="ahhh">
                 <img src="Galery/Group 30 (1).png" alt="" />
               </div>
             </div>
+            <!-- </div> -->
             <div class="wayang1">
-              <div class="ar1">
-                <img src="Galery/IMG/rahwana.png" alt="" />
-                <p>Rahwana</p>
+              <div class="open-bottom">
+                <div class="ar1">
+                  <img src="Galery/IMG/rahwana.png" alt="" />
+                  <p>Rahwana</p>
+                </div>
               </div>
-              <div class="ar1">
-                <img src="Galery/IMG/Gatotkaca.png" alt="" />
-                <p>Gatotkaca</p>
+              <div class="open-bottom" data-delay="0.2">
+                <div class="ar1">
+                  <img src="Galery/IMG/Gatotkaca.png" alt="" />
+                  <p>Gatotkaca</p>
+                </div>
               </div>
-              <div class="ar1">
-                <img src="Galery/IMG/rahwana.png" alt="" />
-                <p>Rahwana</p>
+              <div class="open-bottom" data-delay="0.3">
+                <div class="ar1">
+                  <img src="Galery/IMG/rahwana.png" alt="" />
+                  <p>Rahwana</p>
+                </div>
               </div>
-              <div class="ar1">
-                <img src="Galery/IMG/Gatotkaca.png" alt="" />
-                <p>Gatotkaca</p>
+              <div class="open-bottom" data-delay="0.2">
+                <div class="ar1">
+                  <img src="Galery/IMG/Gatotkaca.png" alt="" />
+                  <p>Gatotkaca</p>
+                </div>
               </div>
             </div>
           </div>
@@ -528,5 +548,6 @@
     </section>
 
     <script src="script/script.js"></script>
+    <script src="script/gsap.js"></script>
   </body>
 </html>
