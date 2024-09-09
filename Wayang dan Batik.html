@@ -23,28 +23,32 @@
     <link
       rel="stylesheet"
       href="https://unpkg.com/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
 
   <body>
     <!-- Navigasi Bar Start -->
     <nav class="navbar">
-      <div class="navbar-logo ease-top">
+      <div class="navbar-logo ease-top" data-delay="0.3">
         <a href="Wayang dan Batik.html">
           <img src="Galery/Logo.png" class="logo-nav" alt="logo-nav" />
         </a>
       </div>
       <div class="navbar-menu">
         <ul>
-          <li class="ease-top">
+          <li class="ease-top" data-delay="0.2">
             <a href="#">Home</a>
             <i class="fa-solid fa-caret-down"></i>
           </li>
-          <li class="ease-top" data-delay="0.15">
-            <a href="/">Wayang</a>
+          <li class="ease-top" data-delay="0.3">
+            <a href="#wayang">Wayang</a>
             <i class="fa-solid fa-caret-down"></i>
           </li>
-          <li class="ease-top" data-delay="0.3">
-            <a href="/">Batik</a>
+          <li class="ease-top" data-delay="0.4">
+            <a href="#batik">Batik</a>
             <i class="fa-solid fa-caret-down"></i>
           </li>
         </ul>
@@ -162,7 +166,7 @@
     </div>
     <!--page 2 end-->
     <!--galery 1 start-->
-    <div class="grid-container-1">
+    <div class="grid-container-1 margin-container">
       <div class="item search-bar">
         <h4>
           Discover the hidden stories within the art of Indonesian wayang and
@@ -213,8 +217,52 @@
         ><img src="Galery/Konten/EXPLORE/semar.png" alt="" />
       </div>
     </div>
+    <!--Galery5-->
+    <section class="secfungbat" id="batik">
+      <div class="jdlfungsibatik">
+        <h2>Functions of Batik</h2>
+        <p>
+          Batik is a cultural and identity medium that reflects social status,
+          philosophical values, and holds high artistic and economic value.
+        </p>
+      </div>
+      <div class="fungsi-batik">
+        <div class="card-fungsibatik">
+          <div class="card2-fungsibatik">
+            <img
+              src="Galery/Konten/KONTEN BATIK/BERDASARKAN FUNGSI DAN TUJUAN/HIASAN DAN AKSESORI/BATIK FRACTAL.jpg"
+              alt="" />
+          </div>
+          <a href="">Decorations</a>
+        </div>
+        <div class="card-fungsibatik">
+          <div class="card2-fungsibatik">
+            <img
+              src="Galery/Konten/KONTEN BATIK/BERDASARKAN FUNGSI DAN TUJUAN/KESEHARIAN/BATIK LASEM SEDERHANA.jpg"
+              alt="" />
+          </div>
+          <a href="">Daily Life</a>
+        </div>
+        <div class="card-fungsibatik">
+          <div class="card2-fungsibatik">
+            <img
+              src="Galery/Konten/KONTEN BATIK/BERDASARKAN FUNGSI DAN TUJUAN/PAKAIAN FORMAL/BATIK PARANG BARONG.jpg"
+              alt="" />
+          </div>
+          <a href="">Formal Clothing</a>
+        </div>
+        <div class="card-fungsibatik">
+          <div class="card2-fungsibatik">
+            <img
+              src="Galery/Konten/KONTEN BATIK/BERDASARKAN FUNGSI DAN TUJUAN/UPACARA ADAT DAN KEAGAMAAN/BATIK SIDOMUKTI.jpg"
+              alt="" />
+          </div>
+          <a href="">Traditional Ceremonies</a>
+        </div>
+      </div>
+    </section>
     <!--galery 2 start-->
-    <section class="secmotifbatik">
+    <section class="secmotifbatik margin-container">
       <h2>Artistry in Every Pattern on Batik Motifs</h2>
       <div class="A1">
         <div class="grid-container">
@@ -323,16 +371,72 @@
         </a>
       </div>
     </section>
+    <section class="secgorbat margin-container">
+      <div class="categori">
+        <h3>Categories of Batik</h3>
+        <div class="kosong"></div>
+      </div>
+      <div class="flex-categoribatik">
+        <div class="categori-card">
+          <div class="kata">
+            <a href="">Batik Cap</a>
+          </div>
+          <img
+            src="Galery/Konten/KONTEN BATIK/BERDASARKAN TEKNIK PEMBUATAN/BATIK CAP/PROSES RESIST DYEING.jpg"
+            alt="" />
+          <p>
+            This technique uses a stamp made of copper, shaped according to the
+            desired pattern or motif.
+          </p>
+        </div>
+        <div class="categori-card">
+          <div class="kata">
+            <a href="">Batik Gabungan</a>
+          </div>
+          <img
+            src="Galery/Konten/KONTEN BATIK/BERDASARKAN TEKNIK PEMBUATAN/BATIK KOMBINASI/PEMBUATAN BATIK KOMBINASI.jpg"
+            alt="" />
+          <p>
+            A combination of several batik-making techniques, usually blending
+            hand-drawn (tulis) and stamped (cap) batik.
+          </p>
+        </div>
+        <div class="categori-card">
+          <div class="kata">
+            <a href="">Batik Print</a>
+          </div>
+          <img
+            src="Galery/Konten/KONTEN BATIK/BERDASARKAN TEKNIK PEMBUATAN/BATIK PRINT/PROSES PEMBUATAN BATIK PRINT.png"
+            alt="" />
+          <p>
+            A modern technique to speed up batik production, using a printing
+            machine to directly print patterns onto fabric.
+          </p>
+        </div>
+        <div class="categori-card">
+          <div class="kata">
+            <a href="">Batik Tulis</a>
+          </div>
+          <img
+            src="Galery/Konten/KONTEN BATIK/BERDASARKAN TEKNIK PEMBUATAN/BATIK TULIS/ILUSTRASI PROSES BATIK TULIS PNG.png"
+            alt="" />
+          <p>
+            The most traditional batik-making technique involves creating
+            patterns directly on fabric using a canting tool and hot wax..
+          </p>
+        </div>
+      </div>
+    </section>
     <!--galery 3 strat-->
-    <section class="secfungyang">
+    <section class="secfungyang" id="wayang">
       <div class="flex3">
-        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+        <h2>The Function of Wayang in Everyday Life</h2>
         <p>
-          Understanding the different functions of wayang in Indonesia reveals
-          that wayang is not only entertainment but also a means of education
-          and the spread of religious and moral values. This tradition reflects
-          Indonesia's rich culture, conveying important messages through
-          captivating art.
+          Wayang is not just a form of entertainment, but also a medium for
+          education and the dissemination of moral and religious values. In
+          every performance, wayang conveys important messages that reflect the
+          richness of Indonesian culture, imparting wisdom through meaningful
+          stories.
         </p>
       </div>
       <div class="container">
@@ -371,7 +475,7 @@
       </div>
     </section>
     <!--galery 4 start-->
-    <section class="seccat">
+    <section class="seccat margin-container">
       <div class="judulcatway">
         <h2>Categories of Wayang</h2>
         <div class="kosong"></div>
@@ -433,108 +537,8 @@
         </div>
       </div>
     </section>
-    <!--Galery5-->
-    <section class="secfungbat">
-      <div class="jdlfungsibatik">
-        <h2>Functions of Batik</h2>
-        <p>
-          Batik is a cultural and identity medium that reflects social status,
-          philosophical values, and holds high artistic and economic value.
-        </p>
-      </div>
-      <div class="fungsi-batik">
-        <div class="card-fungsibatik">
-          <div class="card2-fungsibatik">
-            <img
-              src="Galery/Konten/KONTEN BATIK/BERDASARKAN FUNGSI DAN TUJUAN/HIASAN DAN AKSESORI/BATIK FRACTAL.jpg"
-              alt="" />
-          </div>
-          <a href="">Decorations</a>
-        </div>
-        <div class="card-fungsibatik">
-          <div class="card2-fungsibatik">
-            <img
-              src="Galery/Konten/KONTEN BATIK/BERDASARKAN FUNGSI DAN TUJUAN/KESEHARIAN/BATIK LASEM SEDERHANA.jpg"
-              alt="" />
-          </div>
-          <a href="">Daily Life</a>
-        </div>
-        <div class="card-fungsibatik">
-          <div class="card2-fungsibatik">
-            <img
-              src="Galery/Konten/KONTEN BATIK/BERDASARKAN FUNGSI DAN TUJUAN/PAKAIAN FORMAL/BATIK PARANG BARONG.jpg"
-              alt="" />
-          </div>
-          <a href="">Formal Clothing</a>
-        </div>
-        <div class="card-fungsibatik">
-          <div class="card2-fungsibatik">
-            <img
-              src="Galery/Konten/KONTEN BATIK/BERDASARKAN FUNGSI DAN TUJUAN/UPACARA ADAT DAN KEAGAMAAN/BATIK SIDOMUKTI.jpg"
-              alt="" />
-          </div>
-          <a href="">Traditional Ceremonies</a>
-        </div>
-      </div>
-    </section>
 
-    <section class="secgorbat">
-      <div class="categori">
-        <h3>Categories of Batik</h3>
-        <div class="kosong"></div>
-      </div>
-      <div class="flex-categoribatik">
-        <div class="categori-card">
-          <div class="kata">
-            <a href="">Batik Cap</a>
-          </div>
-          <img
-            src="Galery/Konten/KONTEN BATIK/BERDASARKAN TEKNIK PEMBUATAN/BATIK CAP/PROSES RESIST DYEING.jpg"
-            alt="" />
-          <p>
-            This technique uses a stamp made of copper, shaped according to the
-            desired pattern or motif.
-          </p>
-        </div>
-        <div class="categori-card">
-          <div class="kata">
-            <a href="">Batik Gabungan</a>
-          </div>
-          <img
-            src="Galery/Konten/KONTEN BATIK/BERDASARKAN TEKNIK PEMBUATAN/BATIK KOMBINASI/PEMBUATAN BATIK KOMBINASI.jpg"
-            alt="" />
-          <p>
-            A combination of several batik-making techniques, usually blending
-            hand-drawn (tulis) and stamped (cap) batik.
-          </p>
-        </div>
-        <div class="categori-card">
-          <div class="kata">
-            <a href="">Batik Print</a>
-          </div>
-          <img
-            src="Galery/Konten/KONTEN BATIK/BERDASARKAN TEKNIK PEMBUATAN/BATIK PRINT/PROSES PEMBUATAN BATIK PRINT.png"
-            alt="" />
-          <p>
-            A modern technique to speed up batik production, using a printing
-            machine to directly print patterns onto fabric.
-          </p>
-        </div>
-        <div class="categori-card">
-          <div class="kata">
-            <a href="">Batik Tulis</a>
-          </div>
-          <img
-            src="Galery/Konten/KONTEN BATIK/BERDASARKAN TEKNIK PEMBUATAN/BATIK TULIS/ILUSTRASI PROSES BATIK TULIS PNG.png"
-            alt="" />
-          <p>
-            The most traditional batik-making technique involves creating
-            patterns directly on fabric using a canting tool and hot wax..
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="sectributway">
+    <section class="sectributway margin-container">
       <div class="judultribut">
         <h2>Attribute of Wayang</h2>
         <p>
@@ -616,7 +620,7 @@
         </div>
       </div>
     </section>
-    <section class="sectoryway">
+    <section class="sectoryway margin-container">
       <div class="textstoryway">
         <h2>Stories of Wayang</h2>
         <p>
@@ -633,30 +637,44 @@
         </p>
       </div>
       <div class="imgstoryway">
-        <div class="flexstoryway">
-          <a href="">Mahabharata</a>
-          <img src="" alt="" />
-        </div>
-        <div class="flexstoryway">
-          <a href="">Ramayana</a>
-          <img src="" alt="" />
-        </div>
-        <div class="flexstoryway">
-          <a href="">Panji</a>
-          <img src="" alt="" />
-        </div>
+        <swiper-container
+          autoplay-delay="3000"
+          autoplay-disable-on-interaction="false"
+          loop="true"
+          init="false"
+          id="slider-content-story"
+          class="slider-content-story">
+          <swiper-slide class="content-story">
+            <a href="">Mahabharata</a>
+            <img
+              src="Galery/Konten/BERDASARKAN SUMBER CERITA/MAHABARATAH.png"
+              alt="" />
+          </swiper-slide>
+          <swiper-slide class="content-story">
+            <a href="">Ramayana</a>
+            <img
+              src="Galery/Konten/BERDASARKAN SUMBER CERITA/RAMAYANAAHH.png"
+              alt="" />
+          </swiper-slide>
+          <swiper-slide class="content-story">
+            <a href="">Wayang Panji</a>
+            <img
+              src="Galery/Konten/BERDASARKAN SUMBER CERITA/PANJIEHHH.png"
+              alt="" />
+          </swiper-slide>
+        </swiper-container>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer margin-container">
       <div class="nav-footer">
         <img src="Galery/Logo.png" alt="" />
         <div class="nav-foot-items">
           <span>
-            <a href="">Wayang</a>
+            <a href="#wayang">Wayang</a>
             <i class="fa-solid fa-caret-up"></i>
           </span>
           <span>
-            <a href="">Batik</a>
+            <a href="#batik">Batik</a>
             <i class="fa-solid fa-caret-up"></i>
           </span>
         </div>
@@ -664,7 +682,7 @@
       <div class="copyright">
         <p>Created by Aloe vera 2024</p>
         <div class="social-media">
-          <p>Follow us</p>
+          <p>Follow us :</p>
           <i class="fa-brands fa-medium"></i>
           <i class="fa-brands fa-instagram"></i>
           <i class="fa-brands fa-tiktok"></i>
@@ -672,7 +690,30 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
     <script src="script/script.js"></script>
     <script src="script/gsap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiperTestimonial = document.querySelector("#slider-content-story");
+
+      swiperTestimonial.setAttribute("slides-per-view", "2");
+      swiperTestimonial.setAttribute("space-between", "10");
+
+      Object.assign(swiperTestimonial, {
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 2,
+          },
+        },
+      });
+
+      swiperTestimonial.initialize();
+    </script>
   </body>
 </html>
