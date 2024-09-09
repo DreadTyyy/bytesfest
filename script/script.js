@@ -1,4 +1,10 @@
 window.addEventListener("load", () => {
+  const menu = document.querySelector("#menu");
+
+  menu.addEventListener("click", () => {
+    menu.classList.toggle("active-nav");
+  });
+
   const motifBatiks = document.querySelectorAll(".motif-batik");
 
   motifBatiks.forEach((el) => {
@@ -8,12 +14,6 @@ window.addEventListener("load", () => {
       el.classList.add("collapse-active");
     });
   });
-
-  //const menu = document.querySelector('#menu')
-
-  //menu.addEventListener(
-  //    'click',
-  //)
 
   function checkVisibility(el) {
     const rect = el.getBoundingClientRect();
