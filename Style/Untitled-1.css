@@ -899,7 +899,7 @@ Body {
   font-size: 0.8rem;
 }
 
-.sectributway{
+.sectributway {
   margin: 3rem 2rem;
   display: flex;
   flex-direction: column;
@@ -908,26 +908,26 @@ Body {
   gap: 2rem;
 }
 
-.judultribut h2{
+.judultribut h2 {
   font-size: 2rem;
   color: var(--dark-50);
   max-width: 560px;
   text-align: center;
 }
-.judultribut p{
+.judultribut p {
   font-size: 0.8rem;
   color: var(--dark-50);
   max-width: 560px;
   text-align: center;
 }
 
-.cardtribut{
+.cardtribut {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   gap: 16px;
 }
-.kentenartibut{
+.kentenartibut {
   width: 100%;
   position: relative;
   cursor: pointer;
@@ -938,7 +938,7 @@ Body {
   opacity: 100%;
 }
 
-.overlayatr{
+.overlayatr {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -950,11 +950,11 @@ Body {
   transition: all 0.3s ease-in;
 }
 
-.kentenartibut img{
+.kentenartibut img {
   width: 100%;
 }
 
-.textribut{
+.textribut {
   position: absolute;
   padding: 0 10px;
   color: var(--dark-50);
@@ -964,7 +964,7 @@ Body {
   transition: all 0.3s ease-in;
 }
 
-.textribut p{
+.textribut p {
   font-size: 0.8rem;
   padding-top: 4px;
 }
@@ -974,7 +974,7 @@ Body {
   border-top: 1px solid var(--dark-50);
   padding: 20px 0;
 }
-.nav-footer{
+.nav-footer {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -988,25 +988,25 @@ Body {
   max-width: 560px;
   text-align: center;
 }
-.nav-foot-items span{
+.nav-foot-items span {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.nav-foot-items a{
+.nav-foot-items a {
   padding: 10px;
   width: 100%;
   color: var(--dark-50);
   border-top: 1px solid var(--dark-50);
   border-bottom: 1px solid var(--dark-50);
 }
-.nav-foot-items span:nth-child(1) a{
+.nav-foot-items span:nth-child(1) a {
   border-right: 0.5px solid var(--dark-50);
 }
-.nav-foot-items span:nth-child(2) a{
+.nav-foot-items span:nth-child(2) a {
   border-left: 0.5px solid var(--dark-50);
 }
-.nav-foot-items a:hover{
+.nav-foot-items a:hover {
   background-color: var(--primary-color);
 }
 .nav-foot-items span i {
@@ -1014,7 +1014,7 @@ Body {
   color: var(--dark-50);
   opacity: 0;
 }
-.nav-foot-items span:hover i{
+.nav-foot-items span:hover i {
   opacity: 100%;
 }
 .copyright {
@@ -1031,21 +1031,22 @@ Body {
   cursor: pointer;
 }
 
-.sectoryway{
+.sectoryway {
   display: grid;
+  margin: 3rem 2rem;
   grid-template-columns: 1fr 2fr;
 }
 
-.textstoryway{
+.textstoryway {
   color: var(--dark-50);
   font-size: 2rem;
 }
 
-.textstoryway p{
+.textstoryway p {
   font-size: 0.8rem;
 }
 
-.imgstoryway{
+.imgstoryway {
   display: flex;
   flex-direction: row;
 }
@@ -1067,7 +1068,7 @@ Body {
   .container-konten-dua {
     margin: 1.5rem 0;
   }
-  .grid-container-1{
+  .grid-container-1 {
     margin: 1.5rem 2rem;
   }
   .search-bar {
@@ -1080,27 +1081,28 @@ Body {
     grid-row: 1 / span 2;
     font-weight: 600;
   }
-  .secmotifbatik{
+  .secmotifbatik {
     padding: 1.5rem 2rem;
     gap: 1rem;
   }
-  .bawah1{
+  .bawah1 {
     gap: 2rem;
   }
-  .bawah1 b, .image-card .overlay2 b{
+  .bawah1 b,
+  .image-card .overlay2 b {
     width: 25%;
   }
-  .image-card{
+  .image-card {
     height: 240px;
   }
-  .secfungyang{
+  .secfungyang {
     padding: 1.5rem 2rem;
     gap: 1rem;
   }
-  .seccat{
+  .seccat {
     margin: 1.5rem 2rem;
   }
-  .secfungbat{
+  .secfungbat {
     margin: 1.5rem 2rem;
   }
   /* .batas-foto{ */
@@ -1121,23 +1123,23 @@ Body {
     justify-content: center;
     text-align: center;
   }
-  .card-fungsibatik a{
+  .card-fungsibatik a {
     padding: 0.6rem 0.3rem;
     font-size: 0.8rem;
   }
   .flex-categoribatik .categori-card img {
     height: 200px;
   }
-  .sectributway{
+  .sectributway {
     margin: 1.5rem 2rem;
   }
 
-  .footer{
+  .footer {
     margin: 1.5rem 2rem 0 2rem;
   }
 }
 @media (max-width: 450px) {
-  .header .hbg .flex{
+  .header .hbg .flex {
     display: flex;
     flex-direction: column;
   }
@@ -1145,7 +1147,7 @@ Body {
     font-size: 1rem;
     max-width: 100%;
     text-align: center;
-}
+  }
   .container-konten-dua {
     min-height: fit-content;
   }
@@ -1178,103 +1180,104 @@ Body {
     font-size: 1.2rem;
     gap: 0.8rem;
   }
-/*grip fungtion*/
-.grid-container-1 {
-  grid-template-columns: repeat(
-    4,
-    1fr
-  ); /* 6 kolom dengan ukuran yang berbeda */
-  grid-template-rows: repeat(
-    10,
-    0.25fr
-  ); /* 4 baris dengan ukuran fraksi yang sama */
-  gap: 8px; /* Jarak antar elemen */
-}
-.search-bar{
-  grid-column: 1 / span 4;
-  grid-row: 1 / span 2;
-}
-.wayang-1 {
-  grid-column: 1 / span 3;
-  grid-row: 3 / span 2;
-}
+  /*grip fungtion*/
+  .grid-container-1 {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* 6 kolom dengan ukuran yang berbeda */
+    grid-template-rows: repeat(
+      10,
+      0.25fr
+    ); /* 4 baris dengan ukuran fraksi yang sama */
+    gap: 8px; /* Jarak antar elemen */
+  }
+  .search-bar {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+  }
+  .wayang-1 {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 2;
+  }
 
-.wayang-2 {
-  grid-column: 4 / span 1;
-  grid-row: 3 / span 2;
-}
+  .wayang-2 {
+    grid-column: 4 / span 1;
+    grid-row: 3 / span 2;
+  }
 
-.wayang-3 {
-  grid-column: 1 / span 2;
-  grid-row: 5 / span 2;
-}
+  .wayang-3 {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 2;
+  }
 
-.wayang-4 {
-  grid-column: 3 / span 2;
-  grid-row: 5 / span 2;
-}
+  .wayang-4 {
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 2;
+  }
 
-.wayang-5 {
-  grid-column: 1 / span 2;
-  grid-row: 7 / span 2;
-}
+  .wayang-5 {
+    grid-column: 1 / span 2;
+    grid-row: 7 / span 2;
+  }
 
-.wayang-6 {
-  grid-column: 3 / span 2;
-  grid-row: 7 / span 1;
-}
+  .wayang-6 {
+    grid-column: 3 / span 2;
+    grid-row: 7 / span 1;
+  }
 
-.wayang-7 {
-  grid-column: 3 / span 2;
-  grid-row: 8 / span 1;
-}
+  .wayang-7 {
+    grid-column: 3 / span 2;
+    grid-row: 8 / span 1;
+  }
 
-.wayang-8 {
-  grid-column: 1 / span 2;
-  grid-row: 9 / span 2;
-}
+  .wayang-8 {
+    grid-column: 1 / span 2;
+    grid-row: 9 / span 2;
+  }
 
-.wayang-9 {
-  grid-column: 3 / span 2;
-  grid-row: 9 / span 2;
-}
-/*end*/
-/*grid conatiner*/
-.grid-container{
-  transform: rotate(90deg);
-}
-.descriptionmotif{
-  transform: rotate(-90deg);
-}
-.bawah1{
-  display: flex;
-  flex-direction: column;
-}
-.bawah1 b{
-  width: 90%;
-  height: 90%;
-}
-/*end*/
+  .wayang-9 {
+    grid-column: 3 / span 2;
+    grid-row: 9 / span 2;
+  }
+  /*end*/
+  /*grid conatiner*/
+  .grid-container {
+    transform: rotate(90deg);
+  }
+  .descriptionmotif {
+    transform: rotate(-90deg);
+  }
+  .bawah1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .bawah1 b {
+    width: 90%;
+    height: 90%;
+  }
+  /*end*/
   .text-batik img,
   .text-wayang img {
     width: 24px;
     height: 24px;
   }
-  .container{
+  .container {
     display: flex;
     flex-direction: column;
   }
-  .flex3{
+  .flex3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-  .flex3 h2, .flex3 p{
+  .flex3 h2,
+  .flex3 p {
     width: 100%;
   }
-  .flex-categoribatik{
+  .flex-categoribatik {
     overflow: scroll;
     width: 100%;
   }
@@ -1282,19 +1285,20 @@ Body {
     width: 100%;
     height: 100px;
   }
-  .fungsi-batik, .cardtribut{
+  .fungsi-batik,
+  .cardtribut {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  
-.categori {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 8px;
-}
-.sectoryway{
-  display: flex;
-  flex-direction: column;
-}
+
+  .categori {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  .sectoryway {
+    display: flex;
+    flex-direction: column;
+  }
 }
