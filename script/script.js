@@ -1,8 +1,17 @@
 window.addEventListener("load", () => {
   const menu = document.querySelector("#menu");
+  const navbarMenu =document.querySelector('.navbar-menu');
+  const navLinks = document.querySelectorAll('.navbar-menu ul li a');
 
   menu.addEventListener("click", () => {
     menu.classList.toggle("active-nav");
+    navbarMenu.classList.toggle('active-nav');
+  });
+  navLinks.forEach(navLink => {
+    navLink.addEventListener('click', () => {
+      menu.classList.remove("active-nav");
+      navbarMenu.classList.remove('active-nav');
+    })
   });
 
   const motifBatiks = document.querySelectorAll(".motif-batik");
