@@ -1118,7 +1118,29 @@ Body {
     pointer-events: all;
   }
   .navbar-menu {
-    display: none;
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    padding-top: 60px;
+    align-items: flex-start;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in;
+  }
+  .navbar-menu.active-nav {
+    top: 0;
+    height: 100vh;
+  }
+  .navbar-menu ul{
+    padding-top: 20px;
+    width: 100%;
+    flex-direction: column;
+    border-top: 1px solid var(--dark-50);
+
   }
   .wayang1 {
     height: auto;
@@ -1147,7 +1169,7 @@ Body {
   }
   .secfungbat,
   .secfungyang {
-    padding: 3rem 1.5rem 0 1.5rem;
+    padding: 5rem 1.5rem 0 1.5rem;
   }
   .grid-container-1 {
     min-height: 320px;
@@ -1210,7 +1232,7 @@ Body {
     padding: 0.6rem 1rem;
     font-size: 0.8rem;
   }
-  .flex-categoribatik .categori-card img {
+  .flex-categoribatik .categori-card img, .karakter .kar1 img {
     height: 240px;
   }
   .imgstoryway {
@@ -1363,11 +1385,20 @@ Body {
   /*end*/
   /*grid conatiner*/
   .grid-container {
-    transform: rotate(90deg);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90vw;
+    gap: 10px;
   }
-  .descriptionmotif {
-    transform: rotate(-90deg);
+  .grid-container .motif-batik {
+    height: 100px;
+    width: 100%;
   }
+  .grid-container .motif-batik.collapse-active{
+    height: 200px;
+  }
+
   .bawah1 {
     flex-direction: column;
   }
@@ -1402,29 +1433,55 @@ Body {
   .flex3 p {
     width: 100%;
   }
-  .flex-categoribatik {
+  .flex-categoribatik, .karakter {
     overflow: scroll;
     width: 100%;
   }
-  .flex-categoribatik::-webkit-scrollbar {
+  .flex-categoribatik::-webkit-scrollbar,
+  .cardtribut::-webkit-scrollbar, .karakter::-webkit-scrollbar {
     display: none;
   }
-  .flex-categoribatik .categori-card {
+  .flex-categoribatik .categori-card, .karakter .kar1 {
     min-width: 180px;
   }
-  .flex-categoribatik .categori-card img {
+  .flex-categoribatik .categori-card img, .karakter .kar1 img {
     width: 100%;
     height: 220px;
   }
-  .fungsi-batik,
-  .cardtribut {
+
+  .karakter {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .fungsi-batik{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-
+  .judulcatway .kosong{
+    display: none;
+  }
+  .judulcatway h2{
+    white-space: wrap;
+  }
   .categori {
     width: 100%;
     gap: 16px;
+  }
+  .cardtribut{
+    display: flex;
+    overflow: hidden;
+    overflow: scroll;
+    justify-content: flex-start;
+  }
+  .kentenartibut{
+    min-width: 220px;
+    height: 180px;
+  }
+  .kentenartibut img{
+    height: 100%;
+    object-fit: fill;
   }
   .sectoryway {
     display: flex;
@@ -1441,5 +1498,33 @@ Body {
   }
   .social-media i {
     font-size: 1.6rem;
+  }
+  /*font*/
+  .card-fungsibatik a{
+    white-space: nowrap;
+  }
+  .motif-batik .descriptionmotif{
+    font-weight: 700;
+  }
+  .motif-batik .descriptionmotif p:nth-child(2){
+    font-size: 1rem;
+  }
+  .kata a{
+    font-size: 1rem;
+  }
+  .flex-categoribatik .categori-card p{
+    font-size: 1rem;
+  }
+  .karakter .kar1 .spas p{
+    font-size: 1rem;
+  }
+  .textribut {
+    bottom: 10px;
+  }
+  .textribut h4{
+    font-size: 1rem;
+  }
+  .textribut p{
+    font-size: 1rem;
   }
 }
