@@ -263,13 +263,14 @@ Body {
 }
 
 .wayang1 .ar1 img {
+  flex: 1;
   width: 100%;
+  height: 100%;
   border-radius: 10px;
   text-align: center;
 }
 
 .wayang1 .ar1 p {
-  display: inline-block;
   padding: 0.5rem 0;
   background-color: var(--secondary-color);
   color: var(--primary-color);
